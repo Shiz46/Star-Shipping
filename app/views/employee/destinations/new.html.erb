@@ -1,0 +1,15 @@
+<br /> 
+<div class="booyah-box col-10 offset-1">
+ <h1> Add a destination </h1>
+    <%= simple_form_for @newdestination, url: employee_destinations_path do |f| %>
+
+        <%= f.input :destination %>
+        <%= f.input :departure_date %> 
+        <%= f.input :arrival_date %>
+        <%= f.input :vessel_name %>
+        <br />
+        <%= f.submit "Create", class: 'btn btn-primary' %>
+        <br />
+    <% end  %> 
+    <br />
+</div>

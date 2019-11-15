@@ -10,6 +10,24 @@
   </head>
 
   <body>
+
+  <% if notice.present? %>
+    <p class="alert alert-info"><%= notice %></p>
+  <% end %>
+  <% if alert.present? %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
     <%= yield %>
+
+    
+  <!-- Image and text -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <%= image_tag 'ss-logo.jpeg', class: "logo-image"%>
+      <h2> Simply the Best</h2>
+    </a>
+  </nav>
+
   </body>
 </html>

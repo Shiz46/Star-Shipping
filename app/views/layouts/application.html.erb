@@ -18,16 +18,39 @@
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
 
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Just an Image-->
+    <a class="navbar-brand navbar-brand-right" href="#"> 
+      <%= image_tag 'ss-logo.jpeg', class: "logo-image"%>
+    </a>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Quote Request</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Cargo Destinations</a>
+      </li>
+    </ul>
+
+
+  </div>
+</nav>
+
+
     <%= yield %>
 
-    
-  <!-- Image and text -->
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <%= image_tag 'ss-logo.jpeg', class: "logo-image"%>
-      <h2> Simply the Best</h2>
-    </a>
-  </nav>
-
+  
   </body>
 </html>

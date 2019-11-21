@@ -1,5 +1,5 @@
 class Employee::DestinationsController < ApplicationController
-    before_filter :authenticate_user!
+    before_action :authenticate_employee!, only: [:new, :create]
 
 
    def new 

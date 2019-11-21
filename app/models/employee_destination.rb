@@ -1,0 +1,2 @@
+class EmployeeDestination < ApplicationRecord
+end

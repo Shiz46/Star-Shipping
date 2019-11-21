@@ -8,7 +8,7 @@ RSpec.describe Employee::DestinationsController, type: :controller do
         end  
     end 
 
-    describe "grams#new action" do 
+    describe "destinations#new action" do 
         it "shoud successfully show the new form" do 
             get :new
             expect(response).to have_http_status(:success)
@@ -17,7 +17,7 @@ RSpec.describe Employee::DestinationsController, type: :controller do
     end
 
 
-    describe "grams#create action" do 
+    describe "destinations#create action" do 
         it "should successfully create a new destination in our database" do 
             post :create, params: { destination:  { message: 'Let go!' } }
             expect(response).to redirect_to employee_destination_path

@@ -1,5 +1,5 @@
 class Destination < ApplicationRecord
-    has_many :employee_id
+    has_many :employees
     
     validates :destination, presence: true 
     validates :departure_date, presence: true 

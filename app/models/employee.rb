@@ -1,5 +1,5 @@
 class Employee < ApplicationRecord
-  belongs_to :destinations
+  belongs_to :destination
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

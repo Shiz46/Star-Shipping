@@ -1,5 +1,5 @@
 class QuotesController < ApplicationController
-   # before action :authenticate_user!, only: [:new, :create]
+   before_action :authenticate_user!, only: [:new, :create]
     def new
         @quote = Quote.new
     end 
@@ -10,7 +10,8 @@ class QuotesController < ApplicationController
 
 
     def create 
-        @quote = Quote.create(quote_params)
+        current_user.quote.create(quote_params)
+        #@quote = Quote.create(quote_params)
         redirect_to quotes_path
     end 
 

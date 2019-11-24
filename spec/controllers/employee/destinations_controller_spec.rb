@@ -9,7 +9,7 @@ RSpec.describe Employee::DestinationsController, type: :controller do
     end 
 
     describe "destinations#new action" do 
-        it "shoud successfully show the new form" do 
+        it "should successfully show the new form" do 
             get :new
             expect(response).to have_http_status(:success)
         end 

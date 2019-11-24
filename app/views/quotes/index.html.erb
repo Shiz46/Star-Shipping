@@ -1,1 +1,17 @@
-<h1> Get A Quote!</h1>
+<h4> Get A Quote!</h4>
+
+<% @quote.each do |quote| %>
+    <div class="booyah-box col-10  offset-1">
+<b> Name: </b>
+<%= quote.name %><br  />  
+<b> Email: </b>
+<%= quote.email  %><br />
+<b> Phone number:</b>
+<%= quote.phone_number %><br />
+<b> Destination: </b>
+<%= quote.destination  %><br /><br />
+<b> Cargo description: </b>
+<p><%= quote.description %></p><br />
+
+    </div>
+<% end %>

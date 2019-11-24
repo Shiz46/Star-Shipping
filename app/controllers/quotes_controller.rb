@@ -1,10 +1,11 @@
 class QuotesController < ApplicationController
-    before action :authenticate_user!, only: [:new, :create]
+   # before action :authenticate_user!, only: [:new, :create]
     def new
         @quote = Quote.new
     end 
 
     def index 
+        @quote = Quote.all
     end
 
 

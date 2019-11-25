@@ -10,7 +10,7 @@ class QuotesController < ApplicationController
 
 
     def create 
-        current_user.quote.create(quote_params)
+        current_user.quotes.create(quote_params)
         #@quote = Quote.create(quote_params)
         redirect_to quotes_path
     end 
@@ -18,6 +18,6 @@ class QuotesController < ApplicationController
     private 
 
     def quote_params
-        params.require(:quote).permit(:name, :email, :phone_number, :destination, :description)
+        params.require(:quote).permit(:name, :email, :phone_number, :destination, :description, :image)
     end 
 end

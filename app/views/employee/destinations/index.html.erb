@@ -1,3 +1,16 @@
+<div class="booyah-box col-10 offset-1">
     <h1>Destinations</h1>
+</div>
 
-    <h2><%= @newdestinations.inspect %></h2>
+<div class="booyah-box col-10 offset-1">
+<% @destinations.each do |destination| %>
+    <h4> Destination: </h4>
+    #@destinations.destination %><br />
+    <b>Departure date:</b><br />
+    <%= @destinations.departure_date  %>
+    <b>Arrival date:</b><br />
+    arrival date 
+    <b>Vessel name:</b><br />
+    vessel name 
+</div>
+<% end %>

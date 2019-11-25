@@ -4,24 +4,23 @@ class Employee::DestinationsController < ApplicationController
 
    def new 
 
-    @newdestination = Destination.new
+    @destinations = Destination.new
 
    end 
 
    def index 
-    @newdestination = Place.all
+    @destinations = Destination.all
    end 
 
    def create 
-    #@newdestination = Destination.create(destination_params)
-    @newdestination = current_employee.destinations.create(destination_params)
-    redirect_to employee_destination_path
+    @destinations = current_employee.destinations.create(destination_params)
+    redirect_to employee_destinations_path
    end 
 
 
-   #def show 
-   # @newdestination = Destination.find(params[:id])
-  # end 
+   def about 
+   end 
+
 
 
    private 

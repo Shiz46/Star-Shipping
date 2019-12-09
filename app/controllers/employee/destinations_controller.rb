@@ -22,10 +22,25 @@ class Employee::DestinationsController < ApplicationController
    end 
 
 
+   def edit 
+    @newdestinations = Destination.find(params[:id])
+   end 
+
+   def update 
+    @newdestinations = Destination.find(params[:id])
+    @newdestinations.update_attributes(destination_params) 
+    redirect_to employee_destinations_path
+   end 
+
+   def destroy 
+        @newdestinations  =  Destination.find(params[:id])
+        @newdestinations.destroy
+        redirect_to employee_destinations_path
+   end 
 
    private 
 
    def destination_params
-    params.require(:destination).permit(:destination, :departure_date, :arrival_date, :vessel_name)
+    params.require(:destination).permit(:destination, :departure_date, :arrival_date, :vessel_name,)
    end 
 end

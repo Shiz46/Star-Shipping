@@ -1,16 +1,22 @@
-<div class="booyah-box col-10 offset-1">
+<div class="booyah-box col-10 offset-1 text-center">
     <h1>Destinations</h1>
 </div>
 
-<div class="booyah-box col-10 offset-1">
 <% @newdestinations.each do |destination| %>
-    <h4> Destination: </h4>
-   <%= destination.destination %><br />
-    <b>Departure date:</b><br />
-    <%= destination.departure_date  %>
-    <b>Arrival date:</b><br />
-    arrival date 
-    <b>Vessel name:</b><br />
-    vessel name 
-</div>
+    <div class="booyah-box col-10  offset-1 ">       
+<h4> Destination: </h4>
+<%= destination.destination %><br />
+<b>Departure date:</b><br />
+<%= destination.departure_date%><br />
+<b>Arrival date:</b><br />
+<%=destination.arrival_date%><br />
+<b>Vessel name:</b><br />
+<%=destination.vessel_name %>
+
+  
+    <div class="float-right">
+      <%= link_to 'Edit', edit_employee_destination_path(destination.id), class: 'btn btn-priamry' %>
+      <%= link_to 'Destroy', employee_destination_path(destination.id), method: :delete, data: {confirm: 'Are  you sure you want to delete this?'},class: 'btn btn_danger' %>   
+    </div>
+    </div>
 <% end %>

@@ -13,9 +13,15 @@ class Employee::DestinationsController < ApplicationController
    end 
 
    def create 
-    @newdestinations = current_employee.destinations.create(destination_params)
-    redirect_to employee_destinations_path
-   end 
+    @newdestination = current_employee.destinations.create(destination_params)
+    if @newdestination.valid?
+      redirect_to employee_destinations_path
+    else
+      byebug
+      render :new, status: :unprocessable_entity
+    end
+  end 
+   
 
 
    def about 
@@ -41,6 +47,6 @@ class Employee::DestinationsController < ApplicationController
    private 
 
    def destination_params
-    params.require(:destination).permit(:destination, :departure_date, :arrival_date, :vessel_name,)
+    params.require(:destination).permit(:destination, :departure_date, :arrival_date, :vessel_name)
    end 
 end

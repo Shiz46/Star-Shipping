@@ -1,5 +1,5 @@
 class Destination < ApplicationRecord
-    belongs_to :employer
+    belongs_to :employee
     geocoded_by :destination
     after_validation :geocode
     

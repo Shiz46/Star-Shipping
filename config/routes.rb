@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   get  "/quotes", to:  "quotes#index"
   resources :quotes, only: [:new, :create, :edit,  :update, :destroy]
 
+
+  resources :users, only: :show
+  resources :employees, only: :show
+
 end

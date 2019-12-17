@@ -13,7 +13,7 @@
 <% if quote.image_url %>
     <%= image_tag quote.image_url, class: 'img-fluid' %>
 <% end %>
-    <div class="float-right">
+    <div class= "text-center">
       <%= link_to 'Edit', edit_quote_path(quote.id), class: 'btn btn-priamry' %>
       <%= link_to 'Destroy', quote_path(quote.id), method: :delete, data: {confirm: 'Are  you sure you want to delete this?'},class: 'btn btn_danger' %>   
 

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "/employee/destinations", to:  "employee/destinations#index"
   namespace :employee do 
-      resources :destinations, only: [:new, :create, :edit,  :update, :destroy]
+      resources :destinations, only: [:new, :create, :edit,  :update, :destroy, :show]
       get 'about', to: 'destinations#about'
   end
 

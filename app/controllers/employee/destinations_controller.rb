@@ -2,6 +2,11 @@ class Employee::DestinationsController < ApplicationController
     before_action :authenticate_employee!, only: [:new, :create]
 
 
+   def about 
+   end 
+
+
+
    def new 
 
     @newdestinations = Destination.new
@@ -23,9 +28,9 @@ class Employee::DestinationsController < ApplicationController
   end 
    
 
-
-   def about 
-   end 
+    def show 
+      @destination = Destination.find(params[:id])
+    end 
 
 
    def edit 

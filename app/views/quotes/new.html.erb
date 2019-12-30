@@ -1,13 +1,13 @@
-<div class="booyah-box col-10 offset-1 text-center">
-<h4 class="Submit"> Submit a  Quote </h4>
+<div class="text-center Submit">
+<h1> Submit a  Quote </h1>
 </div>
 
 <div class="booyah-box col-10 offset-1 text-center">
 <%= simple_form_for @quote do |f| %>
-    <%= f.input :name %>
-    <%= f.input :destination %>
-    <%= f.input :description %>
-    <%= f.input :image  %>
+    <%= f.input :name %><br />
+    <%= f.input :destination %><br/>
+    <%= f.input :description %><br/>
+    <%= f.input :image  %><br/>
     <%= f.submit "Submit", class: 'btn btn-primary'%>
 <%  end %>
 </div>

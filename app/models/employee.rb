@@ -1,5 +1,6 @@
 class Employee < ApplicationRecord
   has_many :destinations, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
